@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d17af534-8b49-441d-854a-ede968b28f23" name="local-mlehr" url="http://localhost">
+        <fileTransfer mountedRoot="C:\Users\Mlehr\dev\mlehr\s3website" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
