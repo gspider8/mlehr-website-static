@@ -1,0 +1,12 @@
+{
+  "portfolio": [
+    {
+      "description": "FreeCodeCamp JavaScript Course",
+      "frameworks": [],
+      "id": "3-dragon-rpg",
+      "languages": ["HTML", "CSS", "JavaScript"],
+      "name": "Dragon Fighting RPG",
+      "type": "front-end"
+    }
+  ]
+}

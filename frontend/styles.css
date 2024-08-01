@@ -28,8 +28,49 @@
   --font-family: "Lato", sans-serif;
 }
 
+nav {
+  /*padding: 3px;*/
+  margin-bottom: 3px;
+  border-bottom: solid var(--header-color) 2px;
+  overflow: hidden;
+  background-color: var(--dark-blue-1);
+}
+
+nav a:first-of-type {
+  background-color: var(--header-color);
+  color: var(--dark-blue-1);
+
+}
+
+nav div {
+  border: solid black 2px;
+}
+
+nav a {
+  float: left;
+  color: var(--header-color);
+  font-size: calc(var(--root-font-size) * 1.5);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav a:first-of-type:hover {
+  color: var(--header-color);
+  background-color: var(--dark-blue-1);
+}
+
+nav a:hover {
+  background-color: var(--header-color);
+  color: var(--dark-blue-1);
+}
+
+/* BODY */
 body {
   background-color: var(--background-color);
+}
+
+main {
   text-align: center;
   padding: 10px;
 }
