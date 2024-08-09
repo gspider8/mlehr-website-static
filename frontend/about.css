@@ -1,0 +1,8 @@
+#name {
+  margin: 25px 0;
+}
+img {
+  max-width: 25% !important;
+  border-radius: 10%;
+  border: var(--accent-color) solid 10px;
+}

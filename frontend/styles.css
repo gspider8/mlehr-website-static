@@ -40,15 +40,7 @@ nav {
   background-color: var(--dark-blue-1);
 }
 
-nav a:first-of-type {
-  background-color: var(--header-color);
-  color: var(--dark-blue-1);
 
-}
-
-nav div {
-  border: solid black 2px;
-}
 
 nav a {
   float: left;
@@ -59,14 +51,19 @@ nav a {
   text-decoration: none;
 }
 
-nav a:first-of-type:hover {
-  color: var(--header-color);
-  background-color: var(--dark-blue-1);
-}
-
 nav a:hover {
   background-color: var(--header-color);
   color: var(--dark-blue-1);
+}
+
+nav a:first-of-type {
+  background-color: var(--header-color);
+  color: var(--dark-blue-1);
+}
+
+nav a:first-of-type:hover {
+  color: var(--header-color);
+  background-color: var(--dark-blue-1);
 }
 
 /* BODY */
