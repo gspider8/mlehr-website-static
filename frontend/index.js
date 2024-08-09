@@ -31,7 +31,7 @@ const capitalizeEachWord = (str) => str.split("-").map(
 function renderProjectCards(objArray) {
   objArray.forEach((obj) => {
     projectCards.innerHTML += `
-      <a href="${obj.id}/"><div class="project-card">
+      <a href="fcc-javascript/${obj.number}-${obj.id}/index.html"><div class="project-card">
         <h2>${obj.name}</h2>
         <p>${capitalizeEachWord(obj.type)} Project</p>
         <p>${obj.description}</p>
