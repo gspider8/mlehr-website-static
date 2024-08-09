@@ -1,0 +1,117 @@
+/*body {*/
+/*  font-family: 'Arial', sans-serif;*/
+/*  line-height: 1.6;*/
+/*}*/
+
+/*Container for centering the content */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/*!* Header styling *!*/
+header {
+  background-color: var(--app-background-color);
+  padding: 20px;
+  text-align: center;
+}
+
+/*!* Header image and name styling *!*/
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/*!* Contact information styling *!*/
+#contactInfo {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: var(--light-color);
+  padding: 15px;
+}
+
+
+/*!* Section styling for employment, education, and skills *!*/
+section {
+  background: var(--app-background-color);
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*!* Timeline styling *!*/
+.entry {
+  border-left: 3px solid blue;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.entry-header {
+  background-color: var(--accent-color);
+  padding: 10px;
+  margin-left: -3px;
+}
+
+.entry-header:hover {
+  background: var(--light-color);
+  color: var(--accent-color);
+}
+
+/*!* Style for the job description content *!*/
+.entry-content p {
+  padding: 5px 10px;
+  background-color: var(--dark-blue-2);
+  border-left: 3px solid blue;
+  display: block;
+}
+
+/*!* List styling for education and skills *!*/
+section ul {
+  list-style: inside square;
+  padding: 0 20px;
+}
+
+section ul li {
+  padding: 2px 0;
+}
+
+
+/*!* Need To Evaluate *!*/
+
+/*!* Adjustments for active class *!*/
+.entry.active .entry-header {
+  background-color: #e2e2e2;
+  color: #333;
+}
+
+.entry.active .entry-content {
+    display: block;
+}
+
+/*!* Visual cue for clickable items *!*/
+.entry .entry-header:after {
+  content: ' (click to expand)';
+  font-size: 0.8em;
+  color: var(--app-background-color);
+}
+
+.entry.active .entry-header:after {
+  content: ' (click to collapse)';
+  font-size: 0.8em;
+  color: var(--app-background-color);
+}

@@ -7,25 +7,7 @@ const languageFilter = document.getElementById("language-filter");
 const frameworkFilter = document.getElementById("framework-filter");
 let myData
 
-const fetchJSON = () => {
-  const pathJSON = "./fcc-javascript/fcc-javascript.json"
-  fetch(pathJSON).then(
-      response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      }
-  ).then(data => {
-    myData = data;
-    console.log("My Data:", myData);
-    renderProjectCards(myData["portfolio"]);
-  }).catch(() => {
-    this.dataError = true;
-  });
-}
-fetchJSON()
-
+fetchJSON("./fcc-javascript/fcc-javascript.json")
 
 const capitalizeEachWord = (str) => str.split("-").map(
   word => word[0].toUpperCase() + word.substring(1)
@@ -96,7 +78,6 @@ frameworkFilter.addEventListener("change", filterProjects)
 filterDropdown.addEventListener("click", () => {
   filterList.classList.toggle("hidden");
 
-  console.log(triangleEl.innerHTML.charCodeAt(0))
   if (triangleEl.innerHTML.charCodeAt(0) === 9660) {
     triangleEl.innerHTML = "&#" + 9650 + ";";
   } else {

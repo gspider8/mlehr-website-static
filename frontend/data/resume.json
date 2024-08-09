@@ -1,0 +1,157 @@
+{
+  "jobs": [
+    {
+      "company": "Web Database Solutions",
+      "description": "",
+      "id": 1,
+      "location": "Remote",
+      "title": "Software Developer",
+      "years": "2023 - 2024"
+    },
+    {
+      "company": "CDM Smith",
+      "description": "",
+      "id": 2,
+      "location": "Union County, NC",
+      "title": "Construction Specialist 1",
+      "years": "2022 - 2023"
+    },
+    {
+      "company": "Child and Family Development",
+      "description": "",
+      "id": 3,
+      "location": "Charlotte, NC",
+      "title": "Client Services Coordinator",
+      "years": "2022"
+    },
+    {
+      "company": "Varsity Tutors",
+      "description": "",
+      "id": 4,
+      "location": "Remote/Charlotte, NC",
+      "title": "Tutor",
+      "years": "2021 - 2022"
+    },
+    {
+      "company": "Clemson Facilities",
+      "description": "",
+      "id": 5,
+      "location": "Clemson, SC",
+      "title": "Facilities Intern",
+      "years": "2021 - 2022"
+    },
+    {
+      "company": "Clemson Department of Civil Engineering",
+      "description": "",
+      "id": 6,
+      "location": "Clemson, SC",
+      "title": "Undergraduate Research Assistant",
+      "years": "2021 - 2022"
+    },
+    {
+      "company": "Hangar15",
+      "description": "",
+      "id": 7,
+      "location": "Daytona Beach, FL",
+      "title": "Team Member",
+      "years": "2016 - 2018"
+    }
+  ],
+  "skills": [
+    {
+      "tags": ["cloud-development"],
+      "name": "AWS",
+      "yearsExperience": "3",
+      "certification": "Certified Cloud Practitioner"
+    },
+    {
+      "tags": ["cloud-development"],
+      "name": "Terraform",
+      "yearsExperience": "2",
+      "certification": "Terraform Associate"
+
+    },
+    {
+      "tags": ["web-development"],
+      "certification": "FreeCodeCamp Responsive Web Design Certification",
+      "name": "HTML/CSS",
+      "yearsExperience": "2"
+    },
+    {
+      "tags": ["web-development"],
+      "name": "JavaScript",
+      "yearsExperience": "2"
+    },
+    {
+      "tags": ["web-development"],
+      "certification": "FreeCodeCamp Responsive Web Design Certification",
+      "name": "HTML/CSS",
+      "yearsExperience": "2"
+    },
+    {
+      "tags": ["web-development"],
+      "name": "Django",
+      "yearsExperience": "2"
+    },
+    {
+      "tags": ["web-development"],
+      "name": "Node.js",
+      "yearsExperience": "1"
+    },
+    {
+      "tags": [
+        "web-development"
+      ],
+      "name": "Next.js",
+      "yearsExperience": "1"
+    },
+    {
+      "tags": [
+        "data"
+      ],
+      "frameworks": "SQL Server, PostgreSQL, DynamoDB, ...",
+      "name": "Databases",
+      "yearsExperience": "3"
+    },
+    {
+      "tags": [
+        "data"
+      ],
+      "name": "SQL",
+      "yearsExperience": "3"
+    },
+    {
+      "tags": [
+        "data"
+      ],
+      "name": "NoSQL",
+      "yearsExperience": "1"
+    },
+    {
+      "tags": [
+        "data"
+      ],
+      "name": "Data Warehouses",
+      "yearsExperience": "1"
+    },
+    {
+      "tags": ["microservices"],
+      "certification": "More Than Certified in Docker",
+      "name": "Docker",
+      "yearsExperience": "1"
+    },
+    {
+      "tags": [
+        "microservices"
+      ],
+      "name": "Kubernetes",
+      "yearsExperience": 1
+    },
+    {"tags": ["devops"], "name": "Jenkins", "yearsExperience": 1},
+    {"tags": ["devops"], "name": "Ansible", "yearsExperience": 1},
+    {"tags": ["programming"], "name": "Python", "yearsExperience": 5},
+    {"tags": ["programming"], "name": "GitHub", "yearsExperience": 5},
+    {"tags": ["programming"], "name": "Git", "yearsExperience": 3},
+    {"tags": ["programming"], "name": "Scripting", "yearsExperience": 2, "related-skills": ["Bash", "PowerShell"]}
+  ]
+}

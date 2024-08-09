@@ -19,17 +19,20 @@
   --light-color: var(--light-grey);
   --accent-color: #314465;
 
-    /* font sizes */
+  /* font sizes */
   --root-font-size: 16px;
   font-size: var(--root-font-size);
 
    /*font-families*/
-  --font-headline: "Roboto Mono", monospace;
-  --font-family: "Lato", sans-serif;
+  --font-headline: 'Times New Roman', serif;
+  --font-family: 'Helvetica', sans-serif;
+
+  font-family: var(--font-family);
 }
 
 h1, h2, h3 {
   color: var(--header-color);
+  font-family: var(--font-headline);
 }
 
 nav {
@@ -45,7 +48,7 @@ nav {
 nav a {
   float: left;
   color: var(--header-color);
-  font-size: calc(var(--root-font-size) * 1.5);
+  font-size: 1.5rem;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -136,7 +139,7 @@ main {
 }
 
 select {
-  /*A reset of styles, including removing the default dropdown arrow*/
+  /*A reset of css, including removing the default dropdown arrow*/
   appearance: none;
   /*Additional resets for further consistency*/
   color: var(--header-color);
@@ -161,7 +164,7 @@ select option[value="0"] {
   background-color: var(--dark-blue-2);
 }
 
-/* Project Cards */
+/*!* Project Cards *!*/
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -174,6 +177,7 @@ select option[value="0"] {
   padding: 1.3rem;
   margin: 1.2rem;
   /*width: 300px;*/
+  line-height: 1.5rem;
   border-radius: 15px;
 }
 
