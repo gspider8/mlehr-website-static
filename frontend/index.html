@@ -10,9 +10,9 @@
 <body>
   <nav>
     <a href="index.html">mlehr.org</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+<!--    <a href="about.html">About</a>-->
+<!--    <a href="projects.html">Projects</a>-->
+<!--    <a href="contact.html">Contact</a>-->
   </nav>
 
 
@@ -20,35 +20,41 @@
   <main>
     <div id="recent-projects">
       <h1 class="title">Recent Projects</h1>
-      <div class="filters">
-        <div class="filter" style="width:200px;">
-          <select id="type-filter">
-            <option value="0" selected>Project Type: </option>
-            <option value="all">All</option>
-            <option value="front-end">Front-End Projects</option>
-            <option value="back-end">Back-End Projects</option>
-            <option value="iac">Infrastructure as Code Projects</option>
-          </select>
-        </div>
-        <div class="filter" style="width:200px;">
-          <select id="language-filter">
-            <option value="0">Languages:</option>
-            <option value="all">All</option>
-            <option value="Python">Python</option>
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="HCL">Terraform HCL</option>
-          </select>
-        </div>
-        <div class="filter" style="width:200px;">
-          <select id="framework-filter">
-            <option value="0">Frameworks:</option>
-            <option value="all">All</option>
-            <option value="Django">Django</option>
-            <option value="Tailwind">Tailwind</option>
-            <option value="Bootstrap">Bootstrap</option>
-          </select>
+      <div class="filter-bg">
+        <h2 id="filter-dropdown">Filters <span id="triangle">&#9660;</span></h2>
+        <div class="filters hidden" id="filter-list">
+          <div class="filter" style="width:200px;">
+            <label class="hidden" for="type-filter">Type Filter</label>
+            <select id="type-filter">
+              <option value="0" selected>Project Type: </option>
+              <option value="all">All</option>
+              <option value="front-end">Front-End Projects</option>
+              <option value="back-end">Back-End Projects</option>
+              <option value="iac">Infrastructure as Code Projects</option>
+            </select>
+          </div>
+          <div class="filter" style="width:200px;">
+            <label class="hidden" for="language-filter">Language Filter</label>
+            <select id="language-filter">
+              <option value="0">Languages:</option>
+              <option value="all">All</option>
+              <option value="Python">Python</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="HCL">Terraform HCL</option>
+            </select>
+          </div>
+          <div class="filter" style="width:200px;">
+            <label class="hidden" for="framework-filter">Framework Filter</label>
+            <select id="framework-filter">
+              <option value="0">Frameworks:</option>
+              <option value="all">All</option>
+              <option value="Django">Django</option>
+              <option value="Tailwind">Tailwind</option>
+              <option value="Bootstrap">Bootstrap</option>
+            </select>
+          </div>
         </div>
       </div>
 

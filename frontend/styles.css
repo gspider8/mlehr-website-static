@@ -28,6 +28,10 @@
   --font-family: "Lato", sans-serif;
 }
 
+h1, h2, h3 {
+  color: var(--header-color);
+}
+
 nav {
   /*padding: 3px;*/
   margin-bottom: 3px;
@@ -89,26 +93,48 @@ main {
 }
 
 /* SELECT BOXES */
+
+.filter-bg {
+  border-radius: 20px;
+  background-color: var(--dark-blue-2);
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 8px;
+}
+
+#filter-dropdown {
+  cursor: pointer;
+  user-select: none;
+}
+
+#triangle {
+  font-size: medium;
+  color: var(--header-color);
+}
+
 .filters {
-  border: 1px solid var(--header-color);
-  /*padding: 5px;*/
-  margin: 0 50px 20px;
-  display: flex;
-  flex-direction: row;
+  display: flex; /* Changes to Flex */
   flex-wrap: wrap;
-  gap: 50px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /*border: 1px solid var(--header-color); !*comment out*!*/
+  gap: 20px 50px;
+
+  margin-top: 10px;
 }
 .filter {
   width: 100%;
   /*min-width: 15ch;*/
   /*max-width: 30ch;*/
-  /*border: 1px solid var(--header-color);*/
+  border: 1px solid var(--header-color);
   border-radius: 0.25em;
-  padding: 0.25em 0.5em;
+  padding: 4px 10px;
   font-size: 1.25rem;
   cursor: pointer;
   line-height: 1.1;
-  background-color: var(--accent-color);
+  background-color: var(--dark-blue-1);
   /*background-image: linear-gradient(to top, #f9f9f9, var(--accent-color) 33%);*/
 }
 
@@ -117,9 +143,10 @@ select {
   appearance: none;
   /*Additional resets for further consistency*/
   color: var(--header-color);
+  /*background-color: var(--background-color);*/
   background-color: transparent;
   border: none;
-  padding: 2px 5px;
+  /*padding: 2px 5px;*/
   width: 100%;
   border-radius: 0.25em;
 
@@ -134,7 +161,7 @@ select option[value="0"] {
 }
 
 .filter select option {
-  background-color: var(--accent-color);
+  background-color: var(--dark-blue-2);
 }
 
 /* Project Cards */
@@ -157,9 +184,11 @@ select option[value="0"] {
   margin-bottom: 2px;
 }
 
-h1, h2, h3 {
-  color: var(--header-color);
-}
+
 a {
   text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
