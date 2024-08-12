@@ -1,20 +1,78 @@
 const timeline = document.getElementById('timeline');
 const skillsBlock = document.getElementById('skillsBlock');
 let myData
+const tags = new Set();
 
 fetchJSON("data/resume.json")
 
-
-// function so repeat isn't necessary for skills and timeline
-
-
-
 const renderResume = () => {
-  const employmentHistory = myData.jobs
-  const categories = myData.skills
-  console.log("Resume:", myData)
+  // find all tags
+  myData.skills.forEach(obj => {
+    obj.tags.forEach(tag => {
+      tags.add(tag)
+    })
+  })
+
+  myData.jobs.forEach(obj => {
+    timeline.innerHTML += `
+      <div class="project-card entry">
+        <h2>${obj.title} at ${obj.company}</h2>
+        <p>${obj.location} | ${obj.years}</p>
+        <p>${obj.description}</p>
+      </div>`
+  })
+  myData.skills.forEach(obj => {
+    skillsBlock.innerHTML += `
+      <div class="project-card entry">
+        <h2>${obj.name}</h2>
+      </div>
+    `
+  })
+  console.log("test")
+  console.log("list",categoryList)
 }
 
+
+
+
+//
+// const skillEntry = document.createElement('div');
+//     skillEntry.className = 'entry';
+//     skillEntry.id = 'entry-' + skill.name;
+//
+//     const header = document.createElement('div');
+//     header.className = 'entry-header';
+//     header.innerText = skill.name;
+//
+//     const content = document.createElement('div');
+//     ``
+// //
+//   // Skill list
+//   category.skills.forEach((skill) => {
+//     let skillElement = document.createElement("li");
+//     skillElement.innerText = skill.name;
+//     let sublist = document.createElement('ul')
+//
+//     // Additional Skill Attributes
+//     Object.keys(skill).forEach((key) => {
+//       if (key !== 'name') {
+//         let newElement = document.createElement('li');
+//         newElement.innerText = `${key}: ${skill[key]}`;
+//         sublist.appendChild(newElement)
+//       }
+//     })
+//
+//     skillElement.appendChild(sublist);
+//     skillList.appendChild(skillElement);
+//   });
+//   content.appendChild(skillList);
+//
+//   content.style.display = 'none';
+//
+//   // Append header and content to the entry
+//   entry.appendChild(header);
+//   entry.appendChild(content);
+//
 
 // --- TIMELINE ---
 
@@ -74,46 +132,6 @@ const renderResume = () => {
 
 
 
-// categories.forEach(category => {
-//   // Entry container for category
-//   const entry = document.createElement('div');
-//   entry.className = 'entry';
-//   entry.id = 'entry-' + category.id;
-//
-//   // Title header for job
-//   const header = document.createElement('div');
-//   header.className = 'entry-header';
-//   header.innerText = category.category;
-//
-//   // Content container for job, initially hidden
-//   const content = document.createElement('div');
-//   const skillList = document.createElement('ul');
-//
-//   // Skill list
-//   category.skills.forEach((skill) => {
-//     let skillElement = document.createElement("li");
-//     skillElement.innerText = skill.name;
-//     let sublist = document.createElement('ul')
-//
-//     // Additional Skill Attributes
-//     Object.keys(skill).forEach((key) => {
-//       if (key !== 'name') {
-//         let newElement = document.createElement('li');
-//         newElement.innerText = `${key}: ${skill[key]}`;
-//         sublist.appendChild(newElement)
-//       }
-//     })
-//
-//     skillElement.appendChild(sublist);
-//     skillList.appendChild(skillElement);
-//   });
-//   content.appendChild(skillList);
-//
-//   content.style.display = 'none';
-//
-//   // Append header and content to the entry
-//   entry.appendChild(header);
-//   entry.appendChild(content);
 //
 //   // TODO Fix collapse/expand
 //

@@ -15,7 +15,7 @@ const fetchJSON = (pathJSON) => {
     if (pageName === "index.html") {
       renderProjectCards(myData["portfolio"]);
     } else if (pageName === "resume.html") {
-      renderResume(myData);
+      renderResume();
     }
   }).catch(() => {
     this.dataError = true;

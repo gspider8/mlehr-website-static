@@ -5,6 +5,7 @@
       "description": "",
       "id": 1,
       "location": "Remote",
+      "name": "Software Developer at Web Database Solutions",
       "title": "Software Developer",
       "years": "2023 - 2024"
     },
@@ -26,7 +27,7 @@
     },
     {
       "company": "Varsity Tutors",
-      "description": "",
+      "description": "show more?",
       "id": 4,
       "location": "Remote/Charlotte, NC",
       "title": "Tutor",
@@ -61,11 +62,12 @@
     {
       "tags": ["cloud-development"],
       "name": "AWS",
+      "id": "aws",
       "yearsExperience": "3",
       "certification": "Certified Cloud Practitioner"
     },
     {
-      "tags": ["cloud-development"],
+      "tags": ["cloud-development", "two-test"],
       "name": "Terraform",
       "yearsExperience": "2",
       "certification": "Terraform Associate"
