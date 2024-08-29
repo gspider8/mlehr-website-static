@@ -1,33 +1,49 @@
 const timeline = document.getElementById('timeline');
 const skillsBlock = document.getElementById('skillsBlock');
 let myData
-const tags = new Set();
+
 
 fetchJSON("data/resume.json")
 
 const renderResume = () => {
-  // find all tags
-  myData.skills.forEach(obj => {
-    obj.tags.forEach(tag => {
-      tags.add(tag)
+  const skillTags = new Set();
+  const {jobs, skills, education, tags} = myData;
+
+  // find all skill tags
+  skills.forEach(skill => {
+    skill.tags.forEach(tag => {
+      skillTags.add(tag)
     })
   })
 
-  myData.jobs.forEach(obj => {
+  // display each job (with a condition to be displayed) on the page
+  // TODO add this condition so that the older jobs can be added to a dropdown
+  jobs.forEach(obj => {
     timeline.innerHTML += `
       <div class="project-card entry">
-        <h2>${obj.title} at ${obj.company}</h2>
+          <h2>${obj.title} at ${obj.company}</h2>
         <p>${obj.location} | ${obj.years}</p>
         <p>${obj.description}</p>
       </div>`
   })
-  myData.skills.forEach(obj => {
+
+  // Display skill categories
+  skillTags.forEach(tag => {
+    console.log(tag)
+    console.log(tags[tag].displayName)
     skillsBlock.innerHTML += `
       <div class="project-card entry">
-        <h2>${obj.name}</h2>
+        <h2>${tags[tag].displayName}</h2>
       </div>
     `
   })
+  // myData.skills.forEach(obj => {
+  //   skillsBlock.innerHTML += `
+  //     <div class="project-card entry">
+  //       <h2>${obj.name}</h2>
+  //     </div>
+  //   `
+  // })
   console.log("test")
   console.log("list",categoryList)
 }

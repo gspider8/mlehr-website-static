@@ -67,7 +67,7 @@
       "certification": "Certified Cloud Practitioner"
     },
     {
-      "tags": ["cloud-development", "two-test"],
+      "tags": ["cloud-development"],
       "name": "Terraform",
       "yearsExperience": "2",
       "certification": "Terraform Associate"
@@ -155,5 +155,42 @@
     {"tags": ["programming"], "name": "GitHub", "yearsExperience": 5},
     {"tags": ["programming"], "name": "Git", "yearsExperience": 3},
     {"tags": ["programming"], "name": "Scripting", "yearsExperience": 2, "related-skills": ["Bash", "PowerShell"]}
-  ]
+  ],
+  "education": [
+    {
+      "name": "Clemson University",
+      "major": "B.S. Civil Engineering",
+      "extracurriculars": [
+        {
+          "name": "Air Force ROTC",
+          "tags": ["leadership"]
+        },
+        {
+          "name": "Chi Epsilon",
+          "description": "Civil Engineering Honor Society",
+          "tags": ["leadership"]
+        }
+      ]
+    }
+  ],
+  "tags": {
+    "cloud-development": {
+      "displayName": "Cloud Development"
+    },
+    "web-development": {
+      "displayName": "Web Development"
+    },
+    "data": {
+      "displayName": "Data"
+    },
+    "microservices": {
+      "displayName": "Microservices"
+    },
+    "devops": {
+      "displayName": "DevOps"
+    },
+    "programming": {
+      "displayName": "Programming"
+    }
+  }
 }
