@@ -3,8 +3,8 @@
 /*  line-height: 1.6;*/
 /*}*/
 
-/*Container for centering the content */
-.container {
+/*center the content */
+main {
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -56,52 +56,45 @@ section h2 {
 
 /*!* Timeline styling *!*/
 .entry {
-  border-left: 3px solid blue;
   margin-bottom: 5px;
-  cursor: pointer;
 }
 
 .entry-header {
-  background-color: var(--accent-color);
   padding: 10px;
   margin-left: -3px;
 }
-
-.entry-header:hover {
-  background: var(--light-color);
-  color: var(--accent-color);
+/*!* Skills Section styling *!*/
+#skills {
+  background-color: transparent;
 }
 
-/*!* Style for the job description content *!*/
-.entry-content p {
-  padding: 5px 10px;
-  background-color: var(--dark-blue-2);
-  border-left: 3px solid blue;
-  display: block;
+#skills-h2 {
+  text-align: center;
 }
 
-/*!* List styling for education and skills *!*/
-section ul {
-  list-style: inside square;
-  padding: 0 20px;
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
 }
 
-section ul li {
-  padding: 2px 0;
+.skill-entry {
+  background-color: var(--accent-color);
+  padding: 1.3rem;
+  margin: 1.2rem;
+  width: 300px;
+  line-height: 1.5rem;
+  border-radius: 15px;
+}
+
+.skill-entry-header {
+
 }
 
 
 /*!* Need To Evaluate *!*/
-
-/*!* Adjustments for active class *!*/
-.entry.active .entry-header {
-  background-color: #e2e2e2;
-  color: #333;
-}
-
-.entry.active .entry-content {
-    display: block;
-}
 
 /*!* Visual cue for clickable items *!*/
 .entry .entry-header:after {

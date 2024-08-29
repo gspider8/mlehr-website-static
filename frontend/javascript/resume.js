@@ -1,20 +1,14 @@
 const timeline = document.getElementById('timeline');
-const skillsBlock = document.getElementById('skillsBlock');
+const skillSection = document.getElementById('skills');
 let myData
 
+// TODO make header sizes larger on global css
 
 fetchJSON("data/resume.json")
 
 const renderResume = () => {
-  const skillTags = new Set();
-  const {jobs, skills, education, tags} = myData;
+  const {jobs, skills, education, certifications, tags} = myData;
 
-  // find all skill tags
-  skills.forEach(skill => {
-    skill.tags.forEach(tag => {
-      skillTags.add(tag)
-    })
-  })
 
   // display each job (with a condition to be displayed) on the page
   // TODO add this condition so that the older jobs can be added to a dropdown
@@ -27,26 +21,74 @@ const renderResume = () => {
       </div>`
   })
 
-  // Display skill categories
-  skillTags.forEach(tag => {
-    console.log(tag)
-    console.log(tags[tag].displayName)
-    skillsBlock.innerHTML += `
-      <div class="project-card entry">
-        <h2>${tags[tag].displayName}</h2>
-      </div>
-    `
-  })
-  // myData.skills.forEach(obj => {
-  //   skillsBlock.innerHTML += `
-  //     <div class="project-card entry">
-  //       <h2>${obj.name}</h2>
-  //     </div>
-  //   `
-  // })
-  console.log("test")
-  console.log("list",categoryList)
+  // find all skill tags
+  const skillCategories = {};
+  for (const skill in skills) {
+    skills[skill].tags.forEach(skillTag => {
+      if (!skillCategories[skillTag]) {
+        skillCategories[skillTag] = [skill];
+      } else {
+        skillCategories[skillTag].push(skill);
+      }
+    })
+  }
+
+  // Display skills by category
+  for (const tagKey in skillCategories) {
+    const skillKeys = skillCategories[tagKey];
+    console.log(tagKey, skillKeys);
+
+    // Create Category Section
+    const categorySection = document.createElement("section");
+    categorySection.classList.add("category-section");
+    categorySection.id = `${tagKey}-section`;
+    categorySection.innerHTML = `<h2 class="category-header">${tags[tagKey].name}</h2>`;
+
+    // Create Skill Containers
+    const skillsContainer = document.createElement("div");
+    skillsContainer.classList.add("skills-container")
+    skillKeys.forEach(skillKey => {
+      const skill = skills[skillKey]
+      const certification = certifications[skill?.certification];
+      skillsContainer.innerHTML += `
+        <div class="skill-entry">
+          <h2 class="skill-entry-header">${skill.name}</h2>
+          <p>Years Experience: ${skill.yearsExperience}</p>
+          ${certification ? `
+            <p>Certification: 
+              <a href="${certification.url}" target="_blank">${certification.name}</a>
+            </p>` : ""
+          }
+        </div>
+      `
+    })
+
+    // Append Skill Containers to Category Container
+    categorySection.append(skillsContainer)
+
+    // Add Category Container to DOM
+    skillSection.append(categorySection);
+  }
+  console.log("still working")
 }
+
+
+    // skillsBlock.innerHTML += `
+    //   <div class="" id="skills-${tagKey}">
+    //     <h2 class="entry-header">${tags[tagKey].displayName}</h2>
+    //     <div class="entries-container">
+    //     </div>
+    //   </div>
+
+          // ${skillKeys.reduce((acc, skillKey) => acc + `
+          //   <div class="entry">
+          //     <h3>${skills[skillKey].name}</h3>
+          //     <p>Years Experience: ${skills[skillKey].yearsExperience}</p>
+          //     ${skills[skillKey]?.certification ? `<p>Certification: ${skills[skillKey].certification}</p>` : ""}
+          //     ${skills[skillKey]?.certification ? certifications[skills[skillKey].certification].embedCode : ""}
+          //     <p></p>
+          //   </div>`, ""
+          // )}
 
 
 

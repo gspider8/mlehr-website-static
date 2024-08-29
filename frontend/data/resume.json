@@ -1,4 +1,25 @@
 {
+  "education": [
+    {
+      "name": "Clemson University",
+      "major": "B.S. Civil Engineering",
+      "extracurriculars": [
+        {
+          "name": "Air Force ROTC",
+          "tags": [
+            "leadership"
+          ]
+        },
+        {
+          "name": "Chi Epsilon",
+          "description": "Civil Engineering Honor Society",
+          "tags": [
+            "leadership"
+          ]
+        }
+      ]
+    }
+  ],
   "jobs": [
     {
       "company": "Web Database Solutions",
@@ -58,56 +79,55 @@
       "years": "2016 - 2018"
     }
   ],
-  "skills": [
-    {
-      "tags": ["cloud-development"],
-      "name": "AWS",
+  "skills": {
+    "aws": {
+      "certification": "awsCCP",
       "id": "aws",
-      "yearsExperience": "3",
-      "certification": "Certified Cloud Practitioner"
+      "name": "AWS",
+      "tags": [
+        "cloud-development"
+      ],
+      "yearsExperience": "3"
     },
-    {
-      "tags": ["cloud-development"],
+    "terraform": {
+      "tags": [
+        "cloud-development"
+      ],
       "name": "Terraform",
       "yearsExperience": "2",
-      "certification": "Terraform Associate"
-
+      "certification": "terraformAssociate"
     },
-    {
-      "tags": ["web-development"],
-      "certification": "FreeCodeCamp Responsive Web Design Certification",
-      "name": "HTML/CSS",
-      "yearsExperience": "2"
-    },
-    {
-      "tags": ["web-development"],
-      "name": "JavaScript",
-      "yearsExperience": "2"
-    },
-    {
-      "tags": ["web-development"],
-      "certification": "FreeCodeCamp Responsive Web Design Certification",
-      "name": "HTML/CSS",
-      "yearsExperience": "2"
-    },
-    {
-      "tags": ["web-development"],
-      "name": "Django",
-      "yearsExperience": "2"
-    },
-    {
-      "tags": ["web-development"],
-      "name": "Node.js",
-      "yearsExperience": "1"
-    },
-    {
+    "html": {
       "tags": [
         "web-development"
       ],
-      "name": "Next.js",
-      "yearsExperience": "1"
+      "certification": "fccResponsiveWebDesign",
+      "name": "HTML",
+      "yearsExperience": "2"
     },
-    {
+    "css": {
+      "tags": [
+        "web-development"
+      ],
+      "certification": "fccResponsiveWebDesign",
+      "name": "CSS",
+      "yearsExperience": "2"
+    },
+    "javascript": {
+      "tags": [
+        "web-development"
+      ],
+      "name": "JavaScript",
+      "yearsExperience": "2"
+    },
+    "django": {
+      "tags": [
+        "web-development"
+      ],
+      "name": "Django",
+      "yearsExperience": "2"
+    },
+    "databases": {
       "tags": [
         "data"
       ],
@@ -115,82 +135,136 @@
       "name": "Databases",
       "yearsExperience": "3"
     },
-    {
+    "sql": {
       "tags": [
         "data"
       ],
       "name": "SQL",
       "yearsExperience": "3"
     },
-    {
+    "nosql": {
       "tags": [
         "data"
       ],
       "name": "NoSQL",
       "yearsExperience": "1"
     },
-    {
+    "docker": {
       "tags": [
-        "data"
+        "microservices"
       ],
-      "name": "Data Warehouses",
-      "yearsExperience": "1"
-    },
-    {
-      "tags": ["microservices"],
-      "certification": "More Than Certified in Docker",
       "name": "Docker",
       "yearsExperience": "1"
     },
-    {
+    "kubernetes": {
       "tags": [
         "microservices"
       ],
       "name": "Kubernetes",
       "yearsExperience": 1
     },
-    {"tags": ["devops"], "name": "Jenkins", "yearsExperience": 1},
-    {"tags": ["devops"], "name": "Ansible", "yearsExperience": 1},
-    {"tags": ["programming"], "name": "Python", "yearsExperience": 5},
-    {"tags": ["programming"], "name": "GitHub", "yearsExperience": 5},
-    {"tags": ["programming"], "name": "Git", "yearsExperience": 3},
-    {"tags": ["programming"], "name": "Scripting", "yearsExperience": 2, "related-skills": ["Bash", "PowerShell"]}
-  ],
-  "education": [
-    {
-      "name": "Clemson University",
-      "major": "B.S. Civil Engineering",
-      "extracurriculars": [
-        {
-          "name": "Air Force ROTC",
-          "tags": ["leadership"]
-        },
-        {
-          "name": "Chi Epsilon",
-          "description": "Civil Engineering Honor Society",
-          "tags": ["leadership"]
-        }
+    "jenkins": {
+      "tags": [
+        "devops"
+      ],
+      "name": "Jenkins",
+      "yearsExperience": 1
+    },
+    "ansible": {
+      "tags": [
+        "devops"
+      ],
+      "name": "Ansible",
+      "yearsExperience": 1
+    },
+    "python": {
+      "tags": [
+        "programming"
+      ],
+      "name": "Python",
+      "yearsExperience": 5
+    },
+    "github": {
+      "tags": [
+        "programming"
+      ],
+      "name": "GitHub",
+      "yearsExperience": 5
+    },
+    "git": {
+      "tags": [
+        "programming"
+      ],
+      "name": "Git",
+      "yearsExperience": 3
+    },
+    "scripting": {
+      "tags": [
+        "programming"
+      ],
+      "name": "Scripting",
+      "yearsExperience": 2,
+      "related-skills": [
+        "Bash",
+        "PowerShell"
       ]
     }
-  ],
+  },
   "tags": {
     "cloud-development": {
-      "displayName": "Cloud Development"
+      "id": "cloud-development",
+      "name": "Cloud Development"
     },
     "web-development": {
-      "displayName": "Web Development"
+      "id": "web-development",
+      "name": "Web Development"
     },
     "data": {
-      "displayName": "Data"
+      "id": "data",
+      "name": "Data"
     },
     "microservices": {
-      "displayName": "Microservices"
+      "id": "microservices",
+      "name": "Microservices"
     },
     "devops": {
-      "displayName": "DevOps"
+      "id": "devops",
+      "name": "DevOps"
     },
     "programming": {
-      "displayName": "Programming"
+      "id": "programming",
+      "name": "Programming"
+    }
+  },
+  "certifications":{
+    "fccResponsiveWebDesign": {
+      "id": "fccResponsiveWebDesign",
+      "name": "FreeCodeCamp Responsive Web Design Certification",
+      "url": "https://www.freecodecamp.org/certification/mlehr3/responsive-web-design"
+    },
+    "terraformAssociate": {
+      "id": "terraformAssociate",
+      "name": "HashiCorp Certified: Terraform Associate (003)",
+      "url": "https://www.credly.com/badges/db94f2e7-3c72-4e62-b4b7-dcf97473c212/public_url",
+      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"db94f2e7-3c72-4e62-b4b7-dcf97473c212\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
+    },
+    "awsCCP": {
+      "id": "awsCCP",
+      "name": "AWS Certified Cloud Practitioner",
+      "url": "https://www.credly.com/badges/9f42c21c-e573-4ee9-aca4-c361fa709824/public_url",
+      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"9f42c21c-e573-4ee9-aca4-c361fa709824\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
+    },
+    "capm": {
+      "id": "capm",
+      "name": "Certified Associate in Project Management (CAPM)®",
+      "url": "https://www.credly.com/badges/1dcee464-c7e7-4a07-9f3b-0d14025c036a/public_url",
+      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"1dcee464-c7e7-4a07-9f3b-0d14025c036a\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
+    },
+    "fe": {
+      "id": "fe",
+      "name": "FE Exam (Civil)",
+      "url": "https://www.credly.com/badges/0fbcd1d6-7e1b-41c4-8d1c-678737661734/public_url",
+      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"0fbcd1d6-7e1b-41c4-8d1c-678737661734\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
     }
   }
 }
