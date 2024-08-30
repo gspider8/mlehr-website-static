@@ -48,14 +48,16 @@ const renderResume = () => {
       ${tags[tagKey].name} <span id="${tagKey}-triangle-dropdown" class="triangle-dropdown"></span>
     </h2>`;
 
-    // Create Skill Containers
+    // Create Skill Container
     const skillsContainer = document.createElement("div");
-    skillsContainer.classList.add("skills-container")
+    skillsContainer.classList.add("cards")
+
+    // Create Each Skill Card
     skillKeys.forEach(skillKey => {
       const skill = skills[skillKey]
       const certification = certifications[skill?.certification];
       skillsContainer.innerHTML += `
-        <div class="skill-entry">
+        <div class="card">
           <h2 class="skill-entry-header">${skill.name}</h2>
           <p>Years Experience: ${skill.yearsExperience}</p>
           ${certification ? `

@@ -43,8 +43,6 @@ nav {
   background-color: var(--dark-blue-1);
 }
 
-
-
 nav a {
   float: left;
   color: var(--header-color);
@@ -76,30 +74,10 @@ body {
 
 main {
   text-align: center;
-  padding: 10px;
-}
-
-#recent-projects {
-  background-color: var(--app-background-color);
+  margin: auto;
+  padding: 20px;
   width: 60%;
-  margin: 1rem auto;
-  border-radius: 30px;
-  padding: 10px;
-}
-
-.title {
-  padding: 0.5rem;
-  margin: 1.3rem 0;
-}
-
-/* SELECT BOXES */
-
-.filter-bg {
-  border-radius: 20px;
-  background-color: var(--dark-blue-2);
-  max-width: 750px;
-  margin: 20px auto;
-  padding: 8px;
+  overflow: hidden;
 }
 
 .dropdown {
@@ -112,59 +90,6 @@ main {
   color: var(--header-color);
 }
 
-.filters {
-  display: flex; /* Changes to Flex */
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  /*border: 1px solid var(--header-color); !*comment out*!*/
-  gap: 20px 50px;
-
-  margin-top: 10px;
-}
-.filter {
-  width: 100%;
-  /*min-width: 15ch;*/
-  /*max-width: 30ch;*/
-  border: 1px solid var(--header-color);
-  border-radius: 0.25em;
-  padding: 4px 10px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  line-height: 1.1;
-  background-color: var(--dark-blue-1);
-  /*background-image: linear-gradient(to top, #f9f9f9, var(--accent-color) 33%);*/
-}
-
-select {
-  /*A reset of css, including removing the default dropdown arrow*/
-  appearance: none;
-  /*Additional resets for further consistency*/
-  color: var(--header-color);
-  /*background-color: var(--background-color);*/
-  background-color: transparent;
-  border: none;
-  /*padding: 2px 5px;*/
-  width: 100%;
-  border-radius: 0.25em;
-
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-}
-
-select option[value="0"] {
-  display: none;
-}
-
-.filter select option {
-  background-color: var(--dark-blue-2);
-}
-
-/*!* Project Cards *!*/
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -172,7 +97,7 @@ select option[value="0"] {
   align-items: flex-start;
 }
 
-.project-card {
+.card {
   background-color: var(--accent-color);
   padding: 1.3rem;
   margin: 1.2rem;
@@ -181,10 +106,9 @@ select option[value="0"] {
   border-radius: 15px;
 }
 
-.project-card h2 {
+.card h2 {
   margin-bottom: 2px;
 }
-
 
 a {
   text-decoration: none;
