@@ -44,3 +44,9 @@ header h1 {
 .category-section {
   background-color: var(--dark-blue-2);
 }
+
+.card img {
+  width: 33%;
+  scale: initial;
+  margin-top: 20px;
+}

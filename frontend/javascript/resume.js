@@ -48,25 +48,31 @@ const renderResume = () => {
       ${tags[tagKey].name} <span id="${tagKey}-triangle-dropdown" class="triangle-dropdown"></span>
     </h2>`;
 
-    // Create Skill Container
+    // Create Skill Card Container
     const skillsContainer = document.createElement("div");
-    skillsContainer.classList.add("cards")
+    skillsContainer.classList.add("cards", "skill-cards")
 
-    // Create Each Skill Card
+    // Create Skill Cards
     skillKeys.forEach(skillKey => {
       const skill = skills[skillKey]
       const certification = certifications[skill?.certification];
-      skillsContainer.innerHTML += `
-        <div class="card">
-          <h2 class="skill-entry-header">${skill.name}</h2>
-          <p>Years Experience: ${skill.yearsExperience}</p>
-          ${certification ? `
-            <p>Certification: 
-              <a href="${certification.url}" target="_blank">${certification.name}</a>
-            </p>` : ""
-      }
-        </div>
+
+      // Create Skill Card
+      const skillCard = document.createElement("div");
+      skillCard.classList.add("card");
+      skillCard.id = `${skillKey}-skill-card`;
+      skillCard.innerHTML = `
+        <h2 class="skill-entry-header">${skill.name}</h2>
+        <p>Years Experience: ${skill.yearsExperience}</p>
+        ${certification 
+        ? certification?.image
+        ? `<img src="images/${certification.image}" alt="${certification.name} badge" />` 
+        : `<p>Certification: <a href="${certification.url}" target="_blank">${certification.name}</a></p>` 
+        : ""}
+        
       `
+
+      skillsContainer.append(skillCard);
     })
 
     // Append Skill Containers to Category Container
@@ -77,151 +83,7 @@ const renderResume = () => {
 
     // Turn Category Container into dropdown menu
     createTriangleDropdown(`${tagKey}-dropdown`, trianglePrefix = tagKey)
+
   }
   console.log("still working")
 }
-
-
-
-
-    // skillsBlock.innerHTML += `
-    //   <div class="" id="skills-${tagKey}">
-    //     <h2 class="entry-header">${tags[tagKey].displayName}</h2>
-    //     <div class="entries-container">
-    //     </div>
-    //   </div>
-
-          // ${skillKeys.reduce((acc, skillKey) => acc + `
-          //   <div class="entry">
-          //     <h3>${skills[skillKey].name}</h3>
-          //     <p>Years Experience: ${skills[skillKey].yearsExperience}</p>
-          //     ${skills[skillKey]?.certification ? `<p>Certification: ${skills[skillKey].certification}</p>` : ""}
-          //     ${skills[skillKey]?.certification ? certifications[skills[skillKey].certification].embedCode : ""}
-          //     <p></p>
-          //   </div>`, ""
-          // )}
-
-
-
-
-//
-// const skillEntry = document.createElement('div');
-//     skillEntry.className = 'entry';
-//     skillEntry.id = 'entry-' + skill.name;
-//
-//     const header = document.createElement('div');
-//     header.className = 'entry-header';
-//     header.innerText = skill.name;
-//
-//     const content = document.createElement('div');
-//     ``
-// //
-//   // Skill list
-//   category.skills.forEach((skill) => {
-//     let skillElement = document.createElement("li");
-//     skillElement.innerText = skill.name;
-//     let sublist = document.createElement('ul')
-//
-//     // Additional Skill Attributes
-//     Object.keys(skill).forEach((key) => {
-//       if (key !== 'name') {
-//         let newElement = document.createElement('li');
-//         newElement.innerText = `${key}: ${skill[key]}`;
-//         sublist.appendChild(newElement)
-//       }
-//     })
-//
-//     skillElement.appendChild(sublist);
-//     skillList.appendChild(skillElement);
-//   });
-//   content.appendChild(skillList);
-//
-//   content.style.display = 'none';
-//
-//   // Append header and content to the entry
-//   entry.appendChild(header);
-//   entry.appendChild(content);
-//
-
-// --- TIMELINE ---
-
-
-
-// employmentHistory.forEach(job => {
-//   // Entry container for job
-//   const entry = document.createElement('div');
-//   entry.className = 'entry';
-//   entry.id = 'entry-' + job.id;
-//
-//   // Title header for job
-//   const header = document.createElement('div');
-//   header.className = 'entry-header';
-//   header.innerText = job.title;
-//
-//   // Content container for job, initially hidden
-//   const content = document.createElement('div');
-//   content.className = 'entry-content';
-//   content.innerHTML = `<strong>  Company:</strong> ${job.company}<br>
-//                            <strong>  Years:</strong> ${job.years}<br>
-//                            <strong>  Location:</strong> ${job.location}<br>
-//                            <p>${job.description}</p>`;
-//   content.style.display = 'none';
-//
-// // Append header and content to the entry
-// entry.appendChild(header);
-// entry.appendChild(content);
-//
-// // Event listener to toggle content visibility
-// header.addEventListener('click', function () {
-//   // Check if the clicked header's content is currently shown
-//   const isContentShown = content.style.display === 'block';
-//   // Hide all open contents
-//   document.querySelectorAll('.entry-content').forEach(el => {
-//     el.style.display = 'none'; // Hide content
-//   });
-//   // Deactivate all headers
-//   document.querySelectorAll('.entry').forEach(el => {
-//     el.classList.remove('active'); // Remove active class
-//   });
-//
-//   if (!isContentShown) {
-//     // If it was not shown before, display it
-//     content.style.display = 'block';
-//     entry.classList.add('active');
-//   } // If it was shown, it will be hidden as part of the above loop
-// });
-//
-// timeline.appendChild(entry);
-
-
-
-
-// --- SKILLS ---
-
-
-
-
-//
-//   // TODO Fix collapse/expand
-//
-// // Event listener to toggle content visibility
-// header.addEventListener('click', function () {
-//   // Check if the clicked header's content is currently shown
-//   const isContentShown = content.style.display === 'block';
-//   // Hide all open contents
-//   document.querySelectorAll('.entry-content').forEach(el => {
-//     el.style.display = 'none'; // Hide content
-//   });
-//   // Deactivate all headers
-//   document.querySelectorAll('.entry').forEach(el => {
-//     el.classList.remove('active'); // Remove active class
-//   });
-//
-//   if (!isContentShown) {
-//     // If it was not shown before, display it
-//     content.style.display = 'block';
-//     entry.classList.add('active');
-//   } // If it was shown, it will be hidden as part of the above loop
-// });
-//
-// skillsBlock.appendChild(entry);

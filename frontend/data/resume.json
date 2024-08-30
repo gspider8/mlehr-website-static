@@ -246,25 +246,29 @@
       "id": "terraformAssociate",
       "name": "HashiCorp Certified: Terraform Associate (003)",
       "url": "https://www.credly.com/badges/db94f2e7-3c72-4e62-b4b7-dcf97473c212/public_url",
-      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"db94f2e7-3c72-4e62-b4b7-dcf97473c212\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
+      "embed": "<div data-iframe-width='150' data-iframe-height='270' data-share-badge-id='db94f2e7-3c72-4e62-b4b7-dcf97473c212' data-share-badge-host='https://www.credly.com'></div>",
+      "image": "hashicorp-certified-terraform-associate-003.png"
     },
     "awsCCP": {
       "id": "awsCCP",
       "name": "AWS Certified Cloud Practitioner",
       "url": "https://www.credly.com/badges/9f42c21c-e573-4ee9-aca4-c361fa709824/public_url",
-      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"9f42c21c-e573-4ee9-aca4-c361fa709824\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
+      "embed": "<div data-iframe-width='150' data-iframe-height='270' data-share-badge-id='9f42c21c-e573-4ee9-aca4-c361fa709824' data-share-badge-host='https://www.credly.com'></div>",
+      "image": "aws-certified-cloud-practitioner.png"
     },
     "capm": {
       "id": "capm",
       "name": "Certified Associate in Project Management (CAPM)®",
       "url": "https://www.credly.com/badges/1dcee464-c7e7-4a07-9f3b-0d14025c036a/public_url",
-      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"1dcee464-c7e7-4a07-9f3b-0d14025c036a\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
+      "embed": "<div data-iframe-width='150' data-iframe-height='270' data-share-badge-id='1dcee464-c7e7-4a07-9f3b-0d14025c036a' data-share-badge-host='https://www.credly.com'></div>",
+      "image": "certified-associate-in-project-management-capm.png"
     },
     "fe": {
       "id": "fe",
       "name": "FE Exam (Civil)",
       "url": "https://www.credly.com/badges/0fbcd1d6-7e1b-41c4-8d1c-678737661734/public_url",
-      "embedCode": "<div data-iframe-width=\"150\" data-iframe-height=\"270\" data-share-badge-id=\"0fbcd1d6-7e1b-41c4-8d1c-678737661734\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>"
+      "embed": "<div data-iframe-width='150' data-iframe-height='270' data-share-badge-id='0fbcd1d6-7e1b-41c4-8d1c-678737661734' data-share-badge-host='https://www.credly.com'></div>",
+      "image": "fe-exam.png"
     }
   }
 }
