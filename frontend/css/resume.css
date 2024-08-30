@@ -64,12 +64,15 @@ section h2 {
   margin-left: -3px;
 }
 /*!* Skills Section styling *!*/
-#skills {
-  background-color: transparent;
-}
+/*#skills {*/
+/*  background-color: transparent;*/
+/*}*/
 
 #skills-h2 {
   text-align: center;
+}
+.category-section {
+  background-color: var(--dark-blue-2);
 }
 
 .skills-container {

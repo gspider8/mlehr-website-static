@@ -3,6 +3,7 @@ const skillSection = document.getElementById('skills');
 let myData
 
 // TODO make header sizes larger on global css
+// TODO On push to main it updates the s3 bucket main website is located on
 
 fetchJSON("data/resume.json")
 
@@ -34,15 +35,18 @@ const renderResume = () => {
   }
 
   // Display skills by category
+  let trianglePrefix;
   for (const tagKey in skillCategories) {
     const skillKeys = skillCategories[tagKey];
-    console.log(tagKey, skillKeys);
+    // console.log(tagKey, skillKeys);
 
     // Create Category Section
     const categorySection = document.createElement("section");
     categorySection.classList.add("category-section");
     categorySection.id = `${tagKey}-section`;
-    categorySection.innerHTML = `<h2 class="category-header">${tags[tagKey].name}</h2>`;
+    categorySection.innerHTML = `<h2 class="category-header dropdown" id="${tagKey}-dropdown">
+      ${tags[tagKey].name} <span id="${tagKey}-triangle-dropdown" class="triangle-dropdown"></span>
+    </h2>`;
 
     // Create Skill Containers
     const skillsContainer = document.createElement("div");
@@ -58,7 +62,7 @@ const renderResume = () => {
             <p>Certification: 
               <a href="${certification.url}" target="_blank">${certification.name}</a>
             </p>` : ""
-          }
+      }
         </div>
       `
     })
@@ -68,9 +72,14 @@ const renderResume = () => {
 
     // Add Category Container to DOM
     skillSection.append(categorySection);
+
+    // Turn Category Container into dropdown menu
+    createTriangleDropdown(`${tagKey}-dropdown`, trianglePrefix = tagKey)
   }
   console.log("still working")
 }
+
+
 
 
     // skillsBlock.innerHTML += `

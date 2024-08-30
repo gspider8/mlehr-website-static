@@ -1,6 +1,5 @@
 const projectCards = document.getElementById("project-cards");
-const filterDropdown = document.getElementById("filter-dropdown");
-const triangleEl = document.getElementById("triangle");
+// const triangleEl = document.getElementById("triangle");
 const filterList = document.getElementById("filter-list");
 const typeFilter = document.getElementById("type-filter");
 const languageFilter = document.getElementById("language-filter");
@@ -75,17 +74,18 @@ typeFilter.addEventListener("change", filterProjects)
 languageFilter.addEventListener("change", filterProjects)
 frameworkFilter.addEventListener("change", filterProjects)
 
-filterDropdown.addEventListener("click", () => {
-  filterList.classList.toggle("hidden");
+createTriangleDropdown("filter-dropdown")
 
-  if (triangleEl.innerHTML.charCodeAt(0) === 9660) {
-    triangleEl.innerHTML = "&#" + 9650 + ";";
-  } else {
-    triangleEl.innerHTML = "&#9660;";
-  }
-
-  // change down arrow to up arrow
-})
+// filterDropdown.addEventListener("click", () => {
+//   filterList.classList.toggle("hidden");
+//
+//   if (triangleEl.innerHTML.charCodeAt(0) === 9660) {
+//     triangleEl.innerHTML = "&#" + 9650 + ";";
+//   } else {
+//     triangleEl.innerHTML = "&#9660;";
+//   }
+//
+// })
 
 
 

@@ -102,12 +102,12 @@ main {
   padding: 8px;
 }
 
-#filter-dropdown {
+.dropdown {
   cursor: pointer;
   user-select: none;
 }
 
-#triangle {
+.triangle-dropdown {
   font-size: medium;
   color: var(--header-color);
 }
