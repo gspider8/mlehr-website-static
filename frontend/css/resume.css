@@ -3,6 +3,7 @@ header {
   background-color: var(--app-background-color);
   padding: 20px;
   text-align: center;
+  border-radius: 30px;
 }
 
 /*!* Header image and name styling *!*/
@@ -26,25 +27,12 @@ header h1 {
   padding: 15px;
 }
 
-/*!* Section styling for employment, education, and skills *!*/
-section {
-  background: var(--app-background-color);
-  margin: 20px 0;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 /*!* Timeline styling *!*/
-.entry {
+.timeline-entry {
   margin-bottom: 5px;
 }
 
-.entry-header {
+.timeline-entry-header {
   padding: 10px;
   margin-left: -3px;
 }
@@ -52,6 +40,7 @@ section h2 {
 #skills-h2 {
   text-align: center;
 }
+
 .category-section {
   background-color: var(--dark-blue-2);
 }

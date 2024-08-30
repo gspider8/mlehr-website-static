@@ -80,6 +80,18 @@ main {
   overflow: hidden;
 }
 
+section {
+  background: var(--app-background-color);
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .dropdown {
   cursor: pointer;
   user-select: none;

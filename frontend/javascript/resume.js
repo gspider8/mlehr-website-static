@@ -15,8 +15,8 @@ const renderResume = () => {
   // TODO add this condition so that the older jobs can be added to a dropdown
   jobs.forEach(obj => {
     timeline.innerHTML += `
-      <div class="project-card entry">
-          <h2>${obj.title} at ${obj.company}</h2>
+      <div class="timeline-entry">
+        <h2 class="timeline-entry-header">${obj.title} at ${obj.company}</h2>
         <p>${obj.location} | ${obj.years}</p>
         <p>${obj.description}</p>
       </div>`
