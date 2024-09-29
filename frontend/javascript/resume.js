@@ -1,4 +1,4 @@
-const timeline = document.getElementById('timeline');
+const timeline = document.getElementById('employmentHistory');
 const skillSection = document.getElementById('skills');
 let myData
 
@@ -15,11 +15,25 @@ const renderResume = () => {
   // TODO add this condition so that the older jobs can be added to a dropdown
   jobs.forEach(obj => {
     timeline.innerHTML += `
-      <div class="timeline-entry">
-        <h2 class="timeline-entry-header">${obj.title} at ${obj.company}</h2>
-        <p>${obj.location} | ${obj.years}</p>
-        <p>${obj.description}</p>
-      </div>`
+      <section class="timeline-entry">
+        <h2 class="category-header dropdown" id="timeline-${obj.id}-dropdown">
+          ${obj.title} at ${obj.company} <span id="timeline-${obj.id}-triangle-dropdown" class="triangle-dropdown"></span>
+        </h2>
+        
+        <div class="card">
+          <p>${obj.years} </p>
+          <p>${obj.location}</p>
+        </div>
+        
+      </section>`
+  })
+
+  // Turn timeline-entry into dropdown menu
+  jobs.forEach(obj => {
+    createTriangleDropdown(
+      `timeline-${obj.id}-dropdown`,
+      trianglePrefix = `timeline-${obj.id}`,
+      hiddenElementDisplayStyle = "block")
   })
 
   // find all skill tags
@@ -35,7 +49,6 @@ const renderResume = () => {
   }
 
   // Display skills by category
-  let trianglePrefix;
   for (const tagKey in skillCategories) {
     const skillKeys = skillCategories[tagKey];
     // console.log(tagKey, skillKeys);

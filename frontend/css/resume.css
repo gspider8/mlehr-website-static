@@ -27,22 +27,36 @@ header h1 {
   padding: 15px;
 }
 
+/*!* General resume styling *!*/
+section > section {
+  background-color: var(--dark-blue-2);
+}
+
 /*!* Timeline styling *!*/
 .timeline-entry {
   margin-bottom: 5px;
+  text-align: left;
+}
+
+#timeline h3 {
+  text-align: left;
+  margin-bottom: 0;
+  color: var(--light-color);
+}
+
+#timeline p {
+  padding-left: 10px;
+  padding-top: 6px;
 }
 
 .timeline-entry-header {
   padding: 10px;
   margin-left: -3px;
 }
+
 /*!* Skills Section styling *!*/
 #skills-h2 {
   text-align: center;
-}
-
-.category-section {
-  background-color: var(--dark-blue-2);
 }
 
 .card img {
