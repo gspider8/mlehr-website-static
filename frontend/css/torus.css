@@ -1,0 +1,19 @@
+.book-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.book-container > div {
+  width: 50%;
+}
+hr {
+  color: var(--header-color);
+  width: 80%;
+  margin: 5px auto 0;
+}
+
+.book-container > div > div:first-of-type {
+  border: 3px solid var(--header-color);
+  /*background-color: var(--header-color);*/
+  /*color: black;*/
+}

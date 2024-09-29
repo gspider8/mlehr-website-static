@@ -1,0 +1,38 @@
+{
+  "users": {
+    "mlehr": {
+      "projects": {
+        "house-line": {},
+        "torus": {}
+      },
+      "cards": {},
+      "highlights": {},
+      "journal": {
+        "2024-08-30": {}
+      },
+      "books": {
+        "wantToRead": {
+          "non-fiction": {
+            "0": {
+              "title": "The Perfectionist's Guide to losing control"
+            },
+            "1": {
+              "title": "God Human, Animal, Machine"
+            }
+          },
+          "fiction": {
+            "0": {
+              "title": "Cloud Atlas"
+            },
+            "1": {
+              "title": "Hamish's book suggestion"
+            },
+            "2": {
+              "title": "Poppy Wars Book 3"
+            }
+          }
+        }
+      }
+    }
+  }
+}
